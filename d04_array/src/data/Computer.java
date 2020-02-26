@@ -29,10 +29,15 @@ public class Computer {
         Scanner sc = new Scanner(System.in);
         System.out.print("NHập id : ");
         id=sc.nextLine();
-        System.out.print("Nhập mô tả : ");
-        description = sc.nextLine() ;
+        
         System.out.print("Nhập đơn giá : ");
         price = sc.nextInt();
+        sc=new Scanner(System.in);
+        
+        System.out.print("Nhập mô tả : ");
+        description = sc.nextLine() ;
+        
+        
     }
 
     @Override
