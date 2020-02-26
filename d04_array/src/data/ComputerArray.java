@@ -15,6 +15,7 @@ public class ComputerArray {
     Computer[] ds;
     int max=10;
     int index=0;
+    
     public ComputerArray(){
         ds=new Computer[max];
     }
@@ -104,7 +105,7 @@ public class ComputerArray {
             System.out.println("Không tìm thấy máy tính có mã số như yêu cầu");
         }
         else{
-            System.out.printf("\nĐã xóa %d máy tính có mã số như yêu cầu\n",countMaSo);
+            System.out.printf("\nĐã xóa máy tính có mã số %s\n",ms);
         }
     }
     
@@ -120,7 +121,7 @@ public class ComputerArray {
             System.out.println("1. Thêm máy tính mới");
             System.out.println("2. Xem danh sách máy tính mới");
             System.out.println("3. Tìm máy tính theo mô tả");
-            System.out.println("3. Xóa máy tính theo mã số");
+            System.out.println("4. Xóa máy tính theo mã số");
             System.out.println("5. Thoát");
             System.out.print("Vui lòng chọn chức nang [1-5] : ");
             op=sc.nextLine().trim();
