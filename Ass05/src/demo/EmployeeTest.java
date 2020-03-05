@@ -73,9 +73,10 @@ public class EmployeeTest {
         
         int cntName=0;
         for(int i=0;i<index;i++){
-            if(emplist[i].name.contains(empName)){
+            if(emplist[i].name.toLowerCase().contains(empName.toLowerCase())){
                 emplist[i].print();
-                cntName++;                
+                cntName++;
+                
             }
         }    
             if(cntName==0){
