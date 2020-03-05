@@ -80,8 +80,10 @@ public class Vehicle {
             try {
                 System.out.print(">> nhap toc do >0 : ");
                 speed = Integer.parseInt(sc.nextLine().trim());
-                
-                
+
+                if (speed > 0) {
+                    break;
+                }
             } catch (Exception e) {
                 System.out.println("Loi sai: " + e.getMessage());
             }
@@ -92,9 +94,7 @@ public class Vehicle {
             try {
                 System.out.print(">> nhap trong luong : ");
                 weight = Integer.parseInt(sc.nextLine().trim());
-                if (weight > 0) {
-                    break;
-                }
+                break;
 
             } catch (Exception e) {
                 System.out.println("Loi sai: " + e.getMessage());
