@@ -11,13 +11,14 @@ Create class VehicleCatalog in package data for managing a collection of Car:
 package data;
 
 public class VehicleCatalog {
-/*    int max, next;
-   Car[] vehicleList;
-   public VehicleCatalog(){
-        max = 10;
-        next = 0;
-        vehicleList = new Car[max];
-    }
+    /*  
+        int max, next;
+        Car[] vehicleList;
+        public VehicleCatalog(){
+            max = 10;
+            next = 0;
+            vehicleList = new Car[max];
+        }
     */
     int max = 10;
     int next = 0;
