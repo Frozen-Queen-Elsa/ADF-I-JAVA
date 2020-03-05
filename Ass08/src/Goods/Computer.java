@@ -28,10 +28,20 @@ public abstract class Computer {
     
     public void accept(){
         Scanner sc= new Scanner(System.in);
-        System.out.println("Nhập ID :");
-        ID=sc.nextLine().trim();
-        System.out.println("Nhập Tên :");
-        name=sc.nextLine().trim();
+        while(true){
+            System.out.println("Nhập ID : ");
+            ID=sc.nextLine().trim();
+            if(ID.length()>0) break;
+            System.out.println("ID is not null !!!");
+        }
+        
+        while(true){
+            System.out.println("Nhập Tên : ");
+            name=sc.nextLine().trim();
+            if(name.length()>0) break;
+            System.out.println("Name is not null !!!");
+        }
+        
         while(true){
             System.out.println("Nhập Price");
             price=sc.nextInt();

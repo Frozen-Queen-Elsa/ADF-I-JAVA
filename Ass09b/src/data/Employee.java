@@ -26,10 +26,20 @@ public abstract class Employee {
     }
     protected void accept(){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Nhập ID : ");
-        ID=sc.nextLine().trim();
-        System.out.println("Nhập Name : ");
-        name=sc.nextLine().trim();
+        while(true){
+            System.out.println("Nhập ID : ");
+            ID=sc.nextLine().trim();
+            if(ID.length()>0) break;
+            System.out.println("ID is not null !!!");
+        }
+        
+        while(true){
+            System.out.println("Nhập Tên : ");
+            name=sc.nextLine().trim();
+            if(name.length()>0) break;
+            System.out.println("Name is not null !!!");
+        }
+        
         while(true){
             System.out.println("Nhập số ngày làm việc");
             workedDays=sc.nextInt();

@@ -23,8 +23,18 @@ public abstract class Products {
     
     protected void accept(){
         Scanner sc= new Scanner(System.in);
-        System.out.println("Nhập ID : "); id=sc.nextLine().trim();
-        System.out.println("Nhập tên : "); name=sc.nextLine().trim();
+        while(true){
+            System.out.println("Nhập ID : ");
+            id=sc.nextLine().trim();
+            if(id.length()>0) break;
+            System.out.println("ID is not null !!!");
+        }
+        while(true){
+            System.out.println("Nhập Tên : ");
+            name=sc.nextLine().trim();
+            if(name.length()>0) break;
+            System.out.println("Name is not null !!!");
+        }
     }
     
     public abstract void printinfo();
