@@ -33,7 +33,7 @@ public class Invoice {
         
         int cntName=0;
         for(int i=0;i<nextItem;i++){
-            if(arrItem[i].name.toLowerCase().contains(sName)){
+            if(arrItem[i].name.toLowerCase().contains(sName.toLowerCase())){
                 arrItem[i].diplayDetail();
                 cntName++;
             }
