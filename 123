@@ -1,25 +1,28 @@
-public static void main(String[] args) {
-        //1. tao mau qui luat(qui tac) cho chuoi ho ten hop le
-        java.util.regex.Pattern p = Pattern.compile("[a-zA-Z ]{1,30}");
-        //2. tao doi tuong de thuc hien tinh nang kiem tra luat p voi chuoi vb bat ky
-        java.util.regex.Matcher m = null;
+ public static void main(String[] args) {
+        //1. Tạo mẫu quy tắc cho chuỗi họ tên hợp lệ
+        java.util.regex.Pattern p=Pattern.compile("[a-zA-Z ][1,30]");
         
-        String hoten = "";
-        Scanner sc = new Scanner(System.in);
+        
+        //2. Tạo đối tượng để thực hiện tính năng kiểm tra luật p với chuỗi văn bản bất kỳ
+        java.util.regex.Matcher m=null;
+        
+        String hoten="";
+        Scanner sc=new Scanner(System.in);
         while(true){
-            System.out.print("Nhap ho va ten sinh vien: ");
-            hoten = sc.nextLine().trim();
+            System.out.println("Nhập họ tên sinh viên : ");
+            hoten=sc.nextLine().trim();
             
-            //3. khoi tao doi tuong matcher m, 
-            //   de tien hanh viec kiem tra so khop "p" voi "hoten"
-            m = p.matcher(hoten);
+            //3. Khởi tạo đối tượng matcher m,để tiến hình so khơp p và chuỗi hoten
+            m=p.matcher(hoten);
             
-            //4. danh gia bang ham matches()/ lookingAt() / find()
+            //4. Đánh giá bằng hàm matches() / lookingAt()  / find()
             if(m.matches()){
-                System.out.println("Ten nhap hop le");
+                System.out.println("Tên nhập hợp lệ");
                 break;
             }
-            //thong bao loi
-            System.out.println("Ten ko hop le, Vui long nhap lai !!!");    
-        }                   
+            //Thông báo lỗi
+            else{
+                System.out.println("Tên không hợp lệ, Vui lòng nhập lại !!!");
+            }
+        }
     }
